@@ -18,6 +18,42 @@ public class Odev2 {
         return kelime.count { it == 'a' || it == 'A' }
     }
 
+    fun icAcilarToplami(kenarSayisi: Int): Int {
+        return (kenarSayisi - 2) * 180
+    }
 
+    fun maasHesapla(gunSayisi: Int): Int {
+        val toplamSaat = gunSayisi * 8
+        var maas = 0
+        if (toplamSaat <= 160) {
+            maas = toplamSaat * 10
+        } else {
+            val mesaiSaat = toplamSaat - 160
+            maas = (160 * 10) + (mesaiSaat * 20)
+        }
+        return maas
+    }
 
+    fun kotaUcretiHesapla(gb: Int): Int {
+        return if (gb <= 50) {
+            100
+        } else {
+            val asim = gb - 50
+            100 + (asim * 4)
+        }
+    }
+}
+
+fun main() {
+    val odev = Odev2()
+
+    println(
+        "25.5 Celsius = ${odev.dereceToFahrenheit(25.5)} Fahrenheit\n" +
+                "kenarları 5 ve 10 olan dikdörtgenin çevresi: ${odev.dikdortgenCevresi(5, 10)}\n" +
+                "5! = ${odev.faktoriyel(5)}\n" +
+                "a sayısı: ${odev.aHarfiSayisi("Kotlini kolayca öğreniyorum")}\n" +
+                "altıgenin iç açılar toplamı : ${odev.icAcilarToplami(6)}\n" +
+                "200 gün çalışan biri ${odev.maasHesapla(200)} tl kazanır\n" +
+                "64GB harcayan biri ${odev.kotaUcretiHesapla(64)} tl öder\n"
+    )
 }
