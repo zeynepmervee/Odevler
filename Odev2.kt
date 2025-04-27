@@ -48,12 +48,15 @@ fun main() {
     val odev = Odev2()
 
     println(
-        "25.5 Celsius = ${odev.dereceToFahrenheit(25.5)} Fahrenheit\n" +
-                "kenarları 5 ve 10 olan dikdörtgenin çevresi: ${odev.dikdortgenCevresi(5, 10)}\n" +
+        "25.5 Celsius = ${odev.fahrenheit(25.5)} Fahrenheit\n" +
+                "kenarları 5 ve 10 olan dikdörtgenin çevresi: ${odev.cevreHesapla(5.1, 10.3)}\n" +
                 "5! = ${odev.faktoriyel(5)}\n" +
-                "a sayısı: ${odev.aHarfiSayisi("Kotlini kolayca öğreniyorum")}\n" +
+                "a sayısı: ${odev.aHarfi("Kotlini kolayca öğreniyorum")}\n" +
                 "altıgenin iç açılar toplamı : ${odev.icAcilarToplami(6)}\n" +
                 "200 gün çalışan biri ${odev.maasHesapla(200)} tl kazanır\n" +
                 "64GB harcayan biri ${odev.kotaUcretiHesapla(64)} tl öder\n"
     )
+
+
+
 }
