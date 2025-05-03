@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activityMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Başlık -->
+        <TextView
+            android:id="@+id/textViewBaslik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mini Alışveriş"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp" />
+
+        <!-- Ürün Görseli -->
+        <ImageView
+            android:id="@+id/imageViewUrun"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:contentDescription="Ürün görseli"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Ürün Adı Girişi -->
+        <EditText
+            android:id="@+id/editTextUrunAdi"
+            android:layout_width="391dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="16dp"
+            android:hint="Ürün Adı Girin"
+            android:inputType="text" />
+
+        <!-- Stok Durumu -->
+        <Switch
+            android:id="@+id/switchStokta"
+            android:layout_width="176dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="12dp"
+            android:text="Stokta var mı?" />
+
+        <!-- Ürün Puanlama -->
+        <RatingBar
+            android:id="@+id/ratingBarPuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            android:rating="3"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Ürün Ekle Butonu -->
+        <Button
+            android:id="@+id/buttonUrunEkle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ürün Ekle"
+            android:layout_marginTop="16dp" />
+
+        <!-- Yükleniyor Barı -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="8dp" />
+
+        <!-- Bilgilendirme -->
+        <TextView
+            android:id="@+id/textViewBilgi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Henüz sepete ürün eklenmedi."
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+</ScrollView>
