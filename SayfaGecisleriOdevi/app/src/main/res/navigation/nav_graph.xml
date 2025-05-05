@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/birinciFragment"
+        android:name="com.zeynepmervekoyuncu.sayfagecisleriodevi.BirinciFragment"
+        android:label="fragment_birinci"
+        tools:layout="@layout/fragment_birinci" >
+        <action
+            android:id="@+id/action_birinciFragment_to_ikinciFragment"
+            app:destination="@id/ikinciFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ikinciFragment"
+        android:name="com.zeynepmervekoyuncu.sayfagecisleriodevi.IkinciFragment"
+        android:label="fragment_ikinci"
+        tools:layout="@layout/fragment_ikinci" >
+        <action
+            android:id="@+id/action_ikinciFragment_to_dorduncuFragment"
+            app:destination="@id/dorduncuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ucuncuFragment"
+        android:name="com.zeynepmervekoyuncu.sayfagecisleriodevi.UcuncuFragment"
+        android:label="fragment_ucuncu"
+        tools:layout="@layout/fragment_ucuncu" >
+        <action
+            android:id="@+id/action_ucuncuFragment_to_dorduncuFragment"
+            app:destination="@id/dorduncuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dorduncuFragment"
+        android:name="com.zeynepmervekoyuncu.sayfagecisleriodevi.DorduncuFragment"
+        android:label="fragment_dorduncu"
+        tools:layout="@layout/fragment_dorduncu" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.zeynepmervekoyuncu.sayfagecisleriodevi.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_birinciFragment"
+            app:destination="@id/birinciFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_ucuncuFragment"
+            app:destination="@id/ucuncuFragment" />
+    </fragment>
+</navigation>
